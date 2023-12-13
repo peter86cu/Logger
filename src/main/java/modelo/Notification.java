@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name="notification")
 public class Notification implements Serializable {
@@ -31,7 +33,8 @@ public class Notification implements Serializable {
 	@Column(name="request")
 	private String request;
 	
-	@Column(name="response")
+	@Column(name="response",columnDefinition = "MEDIUMTEXT")
+    @Type(type = "org.hibernate.type.TextType")
 	private String response;
 	
 	@Column(name="resultado")
