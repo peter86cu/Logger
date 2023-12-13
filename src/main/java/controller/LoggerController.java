@@ -37,7 +37,7 @@ public class LoggerController {
 		return service.actualizarLogin(seguridad);
 	}
 	
-	@PutMapping(value="notification",produces=MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value="notification",produces=MediaType.APPLICATION_JSON_VALUE)
 	@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseStatus(HttpStatus.CREATED)
 	public String guardarNotificacion(@RequestBody String datos) {		
